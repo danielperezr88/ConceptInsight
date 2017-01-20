@@ -49,31 +49,34 @@
         "#8c564b", "#e377c2", "#7f7f7f", "#bcbd22", "#17becf"
       ];
 
+      var cncpts = ['Concept 1', 'Concept 2', 'Concept 3', 'Concept 4', 'Concept 5', 'Concept 6'];
+      /*var concepts = ['Alcalá de Henares', 'Barcelona', 'Cuenca', 'Denia', 'Écija', 'Fuenjirola'];*/
+
       var data = [
-          ['Alcalá de Henares','Barcelona',150],['Alcalá de Henares','Cuenca',100],['Alcalá de Henares','Denia',300],['Alcalá de Henares','Écija',500],['Alcalá de Henares','Fuenjirola',450],
-          ['Barcelona','Alcalá de Henares',150],['Barcelona','Cuenca',250],['Barcelona','Denia',250],['Barcelona','Écija',800],['Barcelona','Fuenjirola',300],
-          ['Cuenca','Alcalá de Henares',100],['Cuenca','Barcelona',250],['Cuenca','Denia',150],['Cuenca','Écija',250],['Cuenca','Fuenjirola',150],
-          ['Denia','Alcalá de Henares',300],['Denia','Barcelona',250],['Denia','Cuenca',150],['Denia','Écija',400],['Denia','Fuenjirola',100],
-          ['Écija','Alcalá de Henares',500],['Écija','Barcelona',800],['Écija','Cuenca',250],['Écija','Denia',400],['Écija','Fuenjirola',300],
-          ['Fuenjirola','Alcalá de Henares',450],['Fuenjirola','Barcelona',300],['Fuenjirola','Cuenca',150],['Fuenjirola','Denia',100],['Fuenjirola','Écija',300]
+          [cncpts[0],cncpts[1],150],[cncpts[0],cncpts[2],100],[cncpts[0],cncpts[3],300],[cncpts[0],cncpts[4],500],[cncpts[0],cncpts[5],450],
+          [cncpts[1],cncpts[0],150],[cncpts[1],cncpts[2],250],[cncpts[1],cncpts[3],250],[cncpts[1],cncpts[4],800],[cncpts[1],cncpts[5],300],
+          [cncpts[2],cncpts[0],100],[cncpts[2],cncpts[1],250],[cncpts[2],cncpts[3],150],[cncpts[2],cncpts[4],250],[cncpts[2],cncpts[5],150],
+          [cncpts[3],cncpts[0],300],[cncpts[3],cncpts[1],250],[cncpts[3],cncpts[2],150],[cncpts[3],cncpts[4],400],[cncpts[3],cncpts[5],100],
+          [cncpts[4],cncpts[0],500],[cncpts[4],cncpts[1],800],[cncpts[4],cncpts[2],250],[cncpts[4],cncpts[3],400],[cncpts[4],cncpts[5],300],
+          [cncpts[5],cncpts[0],450],[cncpts[5],cncpts[1],300],[cncpts[5],cncpts[2],150],[cncpts[5],cncpts[3],100],[cncpts[5],cncpts[4],300]
       ];
 
       var colors = {
-        "Alcalá de Henares": "#da4480",
-        "Barcelona": "#5ab449",
-        "Cuenca": "#7f5acd",
-        "Denia": "#17becf",
-        "Écija": "#bcbd22",
-        "Fuenjirola": "#7f7f7f"
+        cncpts[0]: "#da4480",
+        cncpts[1]: "#5ab449",
+        cncpts[2]: "#7f5acd",
+        cncpts[3]: "#17becf",
+        cncpts[4]: "#bcbd22",
+        cncpts[5]: "#7f7f7f"
       };
 
       var sortOrder =[
-        'Alcalá de Henares',
-        'Barcelona',
-        'Cuenca',
-        'Denia',
-        'Écija',
-        'Fuenjirola'
+        cncpts[0],
+        cncpts[1],
+        cncpts[2],
+        cncpts[3],
+        cncpts[4],
+        cncpts[5]
       ];
 
       function sort(a,b){ return d3.ascending(sortOrder.indexOf(a),sortOrder.indexOf(b)); }
