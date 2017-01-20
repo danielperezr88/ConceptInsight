@@ -44,8 +44,15 @@
   {% block footer_extra %}
     <script type="text/javascript" charset="utf-8">
 
-      var more_colors = [
-        "#1f77b4", "#ff7f0e", "#2ca02c", "#d62728", "#9467bd",
+      function generateObject(keys,values) {
+        var rv = {};
+        for (var i = 0; i < keys.length; ++i)
+          rv[keys[i]] = values[i];
+        return rv;
+      }
+
+      var color_array = [
+        "#da4480", "#5ab449", "#7f5acd", "#1f77b4", "#ff7f0e", "#2ca02c", "#d62728", "#9467bd",
         "#8c564b", "#e377c2", "#7f7f7f", "#bcbd22", "#17becf"
       ];
 
@@ -61,14 +68,7 @@
           [cncpts[5],cncpts[0],450],[cncpts[5],cncpts[1],300],[cncpts[5],cncpts[2],150],[cncpts[5],cncpts[3],100],[cncpts[5],cncpts[4],300]
       ];
 
-      var colors = {
-        cncpts[0]: "#da4480",
-        cncpts[1]: "#5ab449",
-        cncpts[2]: "#7f5acd",
-        cncpts[3]: "#17becf",
-        cncpts[4]: "#bcbd22",
-        cncpts[5]: "#7f7f7f"
-      };
+      var colors = generateObject(cncpts,color_array);
 
       var sortOrder =[
         cncpts[0],
